@@ -21,9 +21,10 @@ export class CreateClientUserCase {
             throw new Error("Client already exists");
         }
 
+        // Criptografar a senha
+        
         const hashPassword = await hash(password, 10);
 
-        // Criptografar a senha
         // Salvar o cliente
 
         const client = await prisma.clients.create({
