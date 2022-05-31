@@ -1,8 +1,6 @@
 import { Request, Response } from "express";
 import { UpdateDeliverymanUseCase } from "./UpdateDeliverymanUseCase";
 
-
-
 export class UpdateDeliverymanController {
     async handle( request: Request, reponse: Response ) {
         const { id_deliveryman } = request;
